@@ -11,6 +11,9 @@
     --primary-color: hsla(170, 100%, 26%, 1);
     --gray-headline: hsla(210, 11%, 15%, 1);
     --gray-paragraph: hsla(210, 9%, 31%, 1);
+
+    --brand-beige: hsla(39, 100%, 97%);
+    --brand-light: hsla(148, 23%, 89%);
 }
 
 body {
@@ -71,5 +74,51 @@ button {
 }
 
 .image {
-    width: 26.3rem;
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+   /*mudando o posicionamento da imagem*/
+    object-position: 0 2rem;
+}
+
+.stats {
+    width: 32.7rem;
+    padding-block: 4rem;
+    margin-inline: auto;
+
+    background: var(--brand-beige);
+    border: 1px solid var(--brand-light);
+    border-radius: .6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.stat h3 {
+    font-size: 4.8rem;
+    color: var(--gray-headline);
+    line-height: 130%;
+    margin-bottom: .4rem;
+}
+
+.stat p {
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    line-height: 150%;
+}
+
+header::before {
+    content: "";
+    width: 109vw;
+    height: 108rem;
+    background-color: var(--brand-light);
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
